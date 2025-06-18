@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.toggleButton {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: #14a900;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
