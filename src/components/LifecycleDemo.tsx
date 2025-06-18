@@ -16,13 +16,18 @@ export class LifecycleDemo extends React.Component<{}, State> {
     console.log("componentDidMount");
   }
 
-  shouldComponentUpdate(_nextProps: {}, _nextState: State) {
-    console.log("shouldComponentUpdate");
-    return true;
+  shouldComponentUpdate(_nextProps: {}, nextState: State) {
+    if (nextState.count !== this.state.count) {
+      console.log("shouldComponentUpdate — state.count изменился");
+      return true;
+    }
+    return false;
   }
 
-  componentDidUpdate(_prevProps: {}, _prevState: State) {
-    console.log("componentDidUpdate");
+  componentDidUpdate(_prevProps: {}, prevState: State) {
+    if (prevState.count !== this.state.count) {
+      console.log("componentDidUpdate — state.count изменился");
+    }
   }
 
   componentWillUnmount() {
