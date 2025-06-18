@@ -50,3 +50,4 @@ export class LifecycleDemo extends React.Component<{}, State> {
     );
   }
 }
+ 
