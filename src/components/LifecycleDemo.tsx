@@ -6,14 +6,10 @@ type State = {
 };
 
 export class LifecycleDemo extends React.Component<{}, State> {
-  constructor(props: {}) {
-    super(props);
-    this.state = { count: 0 };
-    console.log("constructor");
-  }
+  state: State = { count: 0 };
 
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log("componentDidMount (раньше был конструктор)");
   }
 
   shouldComponentUpdate(_nextProps: {}, nextState: State) {
@@ -49,3 +45,4 @@ export class LifecycleDemo extends React.Component<{}, State> {
       </div>
     );
   }
+}
